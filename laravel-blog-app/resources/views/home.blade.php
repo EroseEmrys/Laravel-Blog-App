@@ -14,14 +14,15 @@
                     </div>
                     @endif
 
-                    <form>
+                    <form method="POST" action="{{route('posts.store')}}">
+                        @csrf
                         <div class="form-group">
                             <label>Post Title</label>
-                            <input type="text" name="title" class="form-control" placeholder="Enter Post Title">
+                            <input type="text" name="title" class="form-control" placeholder="Enter Post Title" required>
                         </div>
                         <div class="form-group">
                             <label>Post</label>
-                            <textarea name="description" class="form-control" placeholder="Enter Post Description" rows="15"> </textarea>
+                            <textarea name="description" class="form-control" placeholder="Enter Post Description" rows="15" required> </textarea>
                         </div>
                         </br>
                         <button type="submit" class="btn btn-primary">Post</button>
