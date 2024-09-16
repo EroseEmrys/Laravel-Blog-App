@@ -19,7 +19,7 @@
         </h3>
         <div class="mb-1 text-muted">{{date('Y-M-d', strtotime($post->created_at))}}</div>
         <p class="card-text mb-auto">{{$post->description}}</p>
-        <a href="{{route('posts.show')}}">Continue reading</a>
+        <a href="{{route('posts.show', $post->id)}}">Continue reading</a>
       </div>
     </div>
   </div>
